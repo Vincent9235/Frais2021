@@ -28,15 +28,15 @@ SET time_zone = "+00:00";
 
 CREATE TABLE IF NOT EXISTS `adherents` (
   `id_adherent` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_adherent` varchar(50) CHARACTER SET latin1 NOT NULL,
-  `prenom_adherent` varchar(50) CHARACTER SET latin1 NOT NULL,
+  `nom_adherent` varchar(50) CHARACTER SET utf8 NOT NULL,
+  `prenom_adherent` varchar(50) CHARACTER SET utf8 NOT NULL,
   `dateNaissance_adherent` date NOT NULL,
-  `adresse_adherent` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `cp_adherent` varchar(5) CHARACTER SET latin1 NOT NULL,
-  `ville_adherent` varchar(60) CHARACTER SET latin1 NOT NULL,
-  `tel_adherent` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `email_adherent` varchar(60) CHARACTER SET latin1 NOT NULL,
-  `mdp_adherent` char(255) CHARACTER SET latin1 NOT NULL,
+  `adresse_adherent` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `cp_adherent` varchar(5) CHARACTER SET utf8 NOT NULL,
+  `ville_adherent` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `tel_adherent` varchar(10) CHARACTER SET utf8 NOT NULL,
+  `email_adherent` varchar(60) CHARACTER SET utf8 NOT NULL,
+  `mdp_adherent` char(255) CHARACTER SET utf8 NOT NULL,
   `role_id` int(11) NOT NULL,
   PRIMARY KEY (`id_adherent`),
   KEY `Adherents_Roles_FK` (`role_id`)
@@ -121,18 +121,40 @@ CREATE TABLE IF NOT EXISTS `frais` (
 
 -- --------------------------------------------------------
 
+#------------------------------------------------------------
+# Table: detailfrais
+#------------------------------------------------------------
+
+CREATE TABLE IF NOT EXISTS `detailfrais`(
+        `idNote`      Int  Auto_increment  NOT NULL ,
+        `idMotif`     Varchar (4) NOT NULL ,
+        `idFrais`     Int  NOT NULL ,
+        `commentaire` Varchar (100) NOT NULL,
+        `montant`     DECIMAL(9, 2) NOT NULL ,
+        `date_frais`   DATE NOT NULL ,
+	PRIMARY KEY (`idNote`),
+	KEY `detailfrais_notefrais_FK` (`idfrais`),
+	KEY `detailfrais_motif_FK` (`idMotif`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1;
+
+--
+-- Contraintes pour la table `detailfrais`
+--
+ALTER TABLE `detailfrais`
+  ADD CONSTRAINT `detailfrais_notefrais_FK` FOREIGN KEY (`idFrais`) REFERENCES `notefrais` (`idFrais`),
+  ADD CONSTRAINT `detailfrais_motif_FK` FOREIGN KEY (`idMotif`) REFERENCES `Motifs` (`idMotif`);
 --
 -- Structure de la table `ligues`
 --
 
 CREATE TABLE IF NOT EXISTS `ligues` (
   `idLigue` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_ligue` varchar(70) CHARACTER SET latin1 NOT NULL,
-  `adresse_ligue` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `cp_ligue` varchar(5) CHARACTER SET latin1 NOT NULL,
-  `ville_ligue` varchar(100) CHARACTER SET latin1 NOT NULL,
-  `tel_ligue` varchar(10) CHARACTER SET latin1 NOT NULL,
-  `email_ligue` varchar(60) CHARACTER SET latin1 NOT NULL,
+  `nom_ligue` varchar(70) CHARACTER SET utf8 NOT NULL,
+  `adresse_ligue` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `cp_ligue` varchar(5) CHARACTER SET utf8 NOT NULL,
+  `ville_ligue` varchar(100) CHARACTER SET utf8 NOT NULL,
+  `tel_ligue` varchar(10) CHARACTER SET utf8 NOT NULL,
+  `email_ligue` varchar(60) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`idLigue`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -151,14 +173,15 @@ INSERT INTO `ligues` (`idLigue`, `nom_ligue`, `adresse_ligue`, `cp_ligue`, `vill
 --
 
 CREATE TABLE IF NOT EXISTS `motifs` (
-  `idMotif` varchar(4) CHARACTER SET latin1 NOT NULL,
-  `nomMotif` varchar(40) CHARACTER SET latin1 NOT NULL,
+  `idMotif` varchar(4) CHARACTER SET utf8 NOT NULL,
+  `nomMotif` varchar(40) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`idMotif`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Contenu de la table `motifs`
 --
+
 
 INSERT INTO `motifs` (`idMotif`, `nomMotif`) VALUES
 ('FRKM', 'Frais kilométriques'),
@@ -173,8 +196,8 @@ INSERT INTO `motifs` (`idMotif`, `nomMotif`) VALUES
 
 CREATE TABLE IF NOT EXISTS `roles` (
   `role_id` int(11) NOT NULL AUTO_INCREMENT,
-  `role_nom` varchar(30) CHARACTER SET latin1 NOT NULL,
-  `role_role` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `role_nom` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `role_role` varchar(30) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`role_id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
 
@@ -209,8 +232,8 @@ CREATE TABLE IF NOT EXISTS `valide` (
 
 CREATE TABLE IF NOT EXISTS `valideur` (
   `idValideur` int(11) NOT NULL AUTO_INCREMENT,
-  `nom_valideur` varchar(30) CHARACTER SET latin1 NOT NULL,
-  `prenom_valideur` varchar(30) CHARACTER SET latin1 NOT NULL,
+  `nom_valideur` varchar(30) CHARACTER SET utf8 NOT NULL,
+  `prenom_valideur` varchar(30) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`idValideur`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
