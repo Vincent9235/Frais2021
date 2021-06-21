@@ -47,7 +47,7 @@ namespace Frais2020b
             this.label2 = new System.Windows.Forms.Label();
             this.dtgFrais = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSuppr = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnValider = new System.Windows.Forms.Button();
             this.btnAjouter = new System.Windows.Forms.Button();
@@ -195,6 +195,7 @@ namespace Frais2020b
             // txbTotal
             // 
             this.txbTotal.DecimalPlaces = 2;
+            this.txbTotal.Enabled = false;
             this.txbTotal.Location = new System.Drawing.Point(584, 19);
             this.txbTotal.Maximum = new decimal(new int[] {
             10000,
@@ -253,7 +254,7 @@ namespace Frais2020b
             // 
             this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.Controls.Add(this.button4);
+            this.panel3.Controls.Add(this.btnSuppr);
             this.panel3.Controls.Add(this.button3);
             this.panel3.Controls.Add(this.btnValider);
             this.panel3.Controls.Add(this.btnAjouter);
@@ -262,14 +263,15 @@ namespace Frais2020b
             this.panel3.Size = new System.Drawing.Size(1005, 46);
             this.panel3.TabIndex = 7;
             // 
-            // button4
+            // btnSuppr
             // 
-            this.button4.Location = new System.Drawing.Point(325, 12);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Supprimer";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnSuppr.Location = new System.Drawing.Point(325, 12);
+            this.btnSuppr.Name = "btnSuppr";
+            this.btnSuppr.Size = new System.Drawing.Size(75, 23);
+            this.btnSuppr.TabIndex = 3;
+            this.btnSuppr.Text = "Supprimer";
+            this.btnSuppr.UseVisualStyleBackColor = true;
+            this.btnSuppr.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -333,13 +335,12 @@ namespace Frais2020b
     private System.Windows.Forms.TextBox txbObjet;
     private System.Windows.Forms.Label label4;
     private System.Windows.Forms.Panel panel2;
-    private System.Windows.Forms.NumericUpDown txbTotal;
     private System.Windows.Forms.Label label1;
     private System.Windows.Forms.DateTimePicker dtpNote;
     private System.Windows.Forms.Label label2;
     private System.Windows.Forms.DataGridView dtgFrais;
     private System.Windows.Forms.Panel panel3;
-    private System.Windows.Forms.Button button4;
+    private System.Windows.Forms.Button btnSuppr;
     private System.Windows.Forms.Button button3;
     private System.Windows.Forms.Button btnValider;
     private System.Windows.Forms.Button btnAjouter;
@@ -349,5 +350,6 @@ namespace Frais2020b
     private System.Windows.Forms.Label label6;
     private System.Windows.Forms.Label label7;
     private System.Windows.Forms.ComboBox cbxLigue;
-  }
+        private System.Windows.Forms.NumericUpDown txbTotal;
+    }
 }

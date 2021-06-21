@@ -18,6 +18,7 @@ namespace Frais2020b
     MySqlDataReader sqlLecteur;
     bool connecté = false;
     string nomUser="";
+        string prenomUser = "";
     int idUser;
     bool utilisateurConnecté = false;
     public Form1()
@@ -54,7 +55,7 @@ namespace Frais2020b
       {
         string pw = Fiche.getPw();
         string id = Fiche.getId();
-        sqlCommande.CommandText = "select nom_adherent,id_adherent " +
+        sqlCommande.CommandText = "select nom_adherent,prenom_adherent,id_adherent " +
           "from adherents " +
           "where email_adherent='" + id + "' and mdp_adherent='" + pw + "'";
         sqlLecteur = sqlCommande.ExecuteReader();
@@ -62,9 +63,10 @@ namespace Frais2020b
         {
           sqlLecteur.Read();
           nomUser = sqlLecteur.GetString(0);
-          idUser = sqlLecteur.GetInt32(1);
+          prenomUser= sqlLecteur.GetString(1);
+          idUser = sqlLecteur.GetInt32(2);
           utilisateurConnecté = true;
-          stsUtilisateur.Text= nomUser;
+          stsUtilisateur.Text= nomUser +" "+ prenomUser;
         }
         else { utilisateurConnecté = false;
                MessageBox.Show("Votre email ou mot de passe est incorrect.");
@@ -87,7 +89,7 @@ namespace Frais2020b
 
     private void mnuModifFrais_Click(object sender, EventArgs e)
     {
-      sqlCommande.CommandText = "select * from notefrais LEFT JOIN detailfrais on detailfrais.idNote " +
+      sqlCommande.CommandText = "select noteFrais.idFrais as NumNote, date as DateNote, idMotif as Motif, objet, montant, date_frais from notefrais LEFT JOIN detailfrais on detailfrais.idFrais=noteFrais.idFrais " +
         "where iddemandeur="+idUser+" "+
         "order by date";
       sqlLecteur = sqlCommande.ExecuteReader();

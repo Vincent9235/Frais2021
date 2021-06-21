@@ -52,7 +52,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(268, 16);
+            this.textBox1.Location = new System.Drawing.Point(250, 6);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(164, 22);
             this.textBox1.TabIndex = 0;
@@ -60,7 +60,7 @@
             // nom
             // 
             this.nom.AutoSize = true;
-            this.nom.Location = new System.Drawing.Point(156, 21);
+            this.nom.Location = new System.Drawing.Point(159, 9);
             this.nom.Name = "nom";
             this.nom.Size = new System.Drawing.Size(85, 17);
             this.nom.TabIndex = 1;
@@ -69,7 +69,7 @@
             // prenom
             // 
             this.prenom.AutoSize = true;
-            this.prenom.Location = new System.Drawing.Point(156, 71);
+            this.prenom.Location = new System.Drawing.Point(156, 45);
             this.prenom.Name = "prenom";
             this.prenom.Size = new System.Drawing.Size(106, 17);
             this.prenom.TabIndex = 2;
@@ -77,7 +77,7 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(268, 66);
+            this.textBox2.Location = new System.Drawing.Point(250, 45);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(164, 22);
             this.textBox2.TabIndex = 3;
@@ -85,7 +85,7 @@
             // date_naissance
             // 
             this.date_naissance.AutoSize = true;
-            this.date_naissance.Location = new System.Drawing.Point(156, 114);
+            this.date_naissance.Location = new System.Drawing.Point(159, 84);
             this.date_naissance.Name = "date_naissance";
             this.date_naissance.Size = new System.Drawing.Size(174, 17);
             this.date_naissance.TabIndex = 4;
@@ -94,7 +94,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(336, 114);
+            this.dateTimePicker1.Location = new System.Drawing.Point(339, 84);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 22);
             this.dateTimePicker1.TabIndex = 5;
@@ -102,7 +102,7 @@
             // adresse
             // 
             this.adresse.AutoSize = true;
-            this.adresse.Location = new System.Drawing.Point(156, 166);
+            this.adresse.Location = new System.Drawing.Point(156, 125);
             this.adresse.Name = "adresse";
             this.adresse.Size = new System.Drawing.Size(109, 17);
             this.adresse.TabIndex = 6;
@@ -111,7 +111,7 @@
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(271, 166);
+            this.textBox3.Location = new System.Drawing.Point(268, 125);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(164, 22);
             this.textBox3.TabIndex = 7;
@@ -119,7 +119,7 @@
             // CP
             // 
             this.CP.AutoSize = true;
-            this.CP.Location = new System.Drawing.Point(156, 217);
+            this.CP.Location = new System.Drawing.Point(156, 168);
             this.CP.Name = "CP";
             this.CP.Size = new System.Drawing.Size(131, 17);
             this.CP.TabIndex = 8;
@@ -127,7 +127,7 @@
             // 
             // textBox4
             // 
-            this.textBox4.Location = new System.Drawing.Point(281, 214);
+            this.textBox4.Location = new System.Drawing.Point(278, 168);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(154, 22);
             this.textBox4.TabIndex = 9;
@@ -135,7 +135,7 @@
             // ville
             // 
             this.ville.AutoSize = true;
-            this.ville.Location = new System.Drawing.Point(156, 266);
+            this.ville.Location = new System.Drawing.Point(156, 213);
             this.ville.Name = "ville";
             this.ville.Size = new System.Drawing.Size(82, 17);
             this.ville.TabIndex = 10;
@@ -143,7 +143,7 @@
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(244, 263);
+            this.textBox5.Location = new System.Drawing.Point(235, 213);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(154, 22);
             this.textBox5.TabIndex = 11;
@@ -151,7 +151,7 @@
             // tel
             // 
             this.tel.AutoSize = true;
-            this.tel.Location = new System.Drawing.Point(159, 307);
+            this.tel.Location = new System.Drawing.Point(159, 255);
             this.tel.Name = "tel";
             this.tel.Size = new System.Drawing.Size(121, 17);
             this.tel.TabIndex = 12;
@@ -159,7 +159,7 @@
             // 
             // textBox6
             // 
-            this.textBox6.Location = new System.Drawing.Point(278, 307);
+            this.textBox6.Location = new System.Drawing.Point(281, 255);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(154, 22);
             this.textBox6.TabIndex = 13;
@@ -167,7 +167,7 @@
             // email
             // 
             this.email.AutoSize = true;
-            this.email.Location = new System.Drawing.Point(159, 348);
+            this.email.Location = new System.Drawing.Point(156, 310);
             this.email.Name = "email";
             this.email.Size = new System.Drawing.Size(91, 17);
             this.email.TabIndex = 14;
@@ -175,14 +175,14 @@
             // 
             // textBox7
             // 
-            this.textBox7.Location = new System.Drawing.Point(244, 348);
+            this.textBox7.Location = new System.Drawing.Point(235, 310);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(154, 22);
             this.textBox7.TabIndex = 15;
             // 
             // textBox8
             // 
-            this.textBox8.Location = new System.Drawing.Point(281, 400);
+            this.textBox8.Location = new System.Drawing.Point(281, 362);
             this.textBox8.Name = "textBox8";
             this.textBox8.Size = new System.Drawing.Size(154, 22);
             this.textBox8.TabIndex = 16;
@@ -190,7 +190,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 400);
+            this.label1.Location = new System.Drawing.Point(144, 362);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 17);
             this.label1.TabIndex = 17;
@@ -198,7 +198,7 @@
             // 
             // btnValider
             // 
-            this.btnValider.Location = new System.Drawing.Point(511, 398);
+            this.btnValider.Location = new System.Drawing.Point(147, 415);
             this.btnValider.Name = "btnValider";
             this.btnValider.Size = new System.Drawing.Size(129, 23);
             this.btnValider.TabIndex = 18;
@@ -208,9 +208,9 @@
             // 
             // btnAnnuler
             // 
-            this.btnAnnuler.Location = new System.Drawing.Point(680, 398);
+            this.btnAnnuler.Location = new System.Drawing.Point(318, 415);
             this.btnAnnuler.Name = "btnAnnuler";
-            this.btnAnnuler.Size = new System.Drawing.Size(92, 23);
+            this.btnAnnuler.Size = new System.Drawing.Size(117, 23);
             this.btnAnnuler.TabIndex = 19;
             this.btnAnnuler.Text = "Annuler";
             this.btnAnnuler.UseVisualStyleBackColor = true;
